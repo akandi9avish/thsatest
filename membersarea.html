@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Twin Cities Hospital Suppliers Association </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.navbar {
+margin-bottom: 0;
+border-radius: 0;
+background-color: #5E4485;
+color: #FFF;
+padding: 1% 0;
+font-size: 1.2em;
+border: 0;
+}
+.navbar-brand{
+  float: left;
+  min-height: 55px;
+  padding: 0 15px 5px;
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus ,.navbar-inverse .navbar-nav .active a:hover
+{
+  color: #FFF;
+  background-color:#5E4485;
+}
+.navbar-inverse.navbar-nav li a {
+color: #D5D5D5;
+
+}
+.container{
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+.wrapper{
+  box-shadow: 0 0 20px 0 #5E2285;
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#a777ef;
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background:#f9feff;
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:20px;
+}
+
+.contact form label{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #a777ef;
+}
+
+.contact form button{
+  background:#a777ef
+
+  ;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+.alert{
+  text-align: center;
+  padding:10px;
+  background:#79c879;
+  color:#fff;
+  margin-bottom:10px;
+  display:none;
+}
+footer{
+  width: 100%;
+  background-color: #5E4485;
+  padding: 3%;
+  color: #FFF;
+}
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  color: #FFF;
+}
+.fa:hover{
+  color: #D5D5D5;
+  text-decoration: none;
+
+}
+@media (max-width: 900px){
+  .fa{
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-caption{
+    display: none;
+  }
+  #icon{
+    max-width: 150px;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding:2em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar-inverse navbar fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+
+
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/THSA.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="index.html">HOME</a></li>
+        <li ><a href="about.html">ABOUT</a></li>
+        <li><a href="contactus.html">CONTACT US</a></li>
+        <li class="active"><a href="membersarea.html">USER REGISTRATION</a></li>
+        <li><a href="productsearch.html">PRODUCT SEARCH</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <h1 class="brand"><span>Acme</span>User Registration</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>TWIN</h3>
+        <ul>
+          <li><i class="fa fa-phone"></i>+910000000000</li>
+          <li><i class="fa fa-envelope"></i>gensecthsa@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Email Us</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Name Of The Proprietor</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Name Of Company/Firm</label>
+            <input type="text" name="company" id="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p >
+            <label>Firm/Company Phone Number</label>
+            <input name="message"  id="phoneoffirm"></input>
+          </p>
+          <p>
+            <label>email of comp </label>
+            <input type="email" name="emailoffirm" id="emailoffirm">
+          </p>
+          <p>
+            <label>nature of company</label>
+            <input type="text" name="natureofcompany" id="natureofcompany">
+          </p>
+          <p>
+            <label>dl no</label>
+            <input type="text" name="dlno" id="dlno">
+          </p>
+          <p>
+            <label>gst no</label>
+            <input type="text" name="gstno" id="gstno">
+          </p>
+          <p>
+            <label>pan no</label>
+            <input type="text" name="panno" id="panno">
+          </p>
+          <p>
+            i abide the bye laws of the association
+            <input type="radio" name="agree" id="agree">
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="main.js"></script>
+
+<footer class="container-fluid text-center">
+  <div class="row">
+<div class="col-sm-4">
+  <h4>CONTACT US<br>
+  phone no:+919492949596
+  </h4>
+  <h4>email: gensecthsa@gmail.com</h4>
+</div>
+<div class="col-sm-4">
+  <h3>connect</h3>
+  <a href="https://www.facebook.com/thsain" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/thsa93174337" class="fa fa-twitter"></a>
+  <a href="" class="fa fa-whatsapp"></a>
+  
+</div>
+<div class="col-sm-4">
+  <img src="img/bunny.png" class="icon">
+</div>
+
+  </div>
+</footer>
+
+
+</body>
+</html>

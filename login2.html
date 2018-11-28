@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> twin cities hospital suppliers association </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.navbar {
+margin-bottom: 0;
+border-radius: 0;
+background-color: #5E4485;
+color: #FFF;
+padding: 1% 0;
+font-size: 1.2em;
+border: 0;
+}
+.navbar-brand{
+  float: left;
+  min-height: 55px;
+  padding: 0 15px 5px;
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus ,.navbar-inverse .navbar-nav .active a:hover
+{
+  color: #FFF;
+  background-color:#5E4485;
+}
+.navbar-inverse.navbar-nav li a {
+color: #D5D5D5;
+
+}
+input, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.main-div, .loggedin-div {
+  width: 20%;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 20px;
+  display: none;
+}
+
+
+
+.main-div input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+  border: 1px solid #777;
+}
+
+.main-div button, .loggedin-div button {
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div button:hover, .loggedin-div button:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  cursor: pointer;
+
+
+
+}
+
+footer{
+  width: 100%;
+  background-color: #5E4485;
+  padding: 3%;
+  color: #FFF;
+}
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  color: #FFF;
+}
+.fa:hover{
+  color: #D5D5D5;
+  text-decoration: none;
+
+
+}
+@media (max-width: 900px){
+  .fa{
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-caption{
+    display: none;
+  }
+  #icon{
+    max-width: 150px;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+}
+
+  </style>
+</head>
+<body>
+<nav class="navbar-inverse navbar fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+
+
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/THSA.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="index.html">HOME</a></li>
+        <li ><a href="about.html">ABOUT</a></li>
+        <li><a href="contactus.html">CONTACT US</a></li>
+        <li><a href="productsearch2.html">PRODUCT SEARCH</a></li>
+        <li><a href="dashboard.html">DASHBOARD</a></li>
+        <li class="active"><a href="login2.html">LOGOUT</a></li>
+      </ul>
+  </div>
+</nav>
+
+<div id="login_div" class="main-div">
+
+    <h3>THSA User LogIn</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+
+</div>
+  <div id="user_div" class="loggedin-div">
+    <h3> logout user </h3>
+    <a href="index2.html" id="user_para"></a>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBXMdAzSTIqfS53OrTnclHQyS-6DuWEk7E",
+    authDomain: "thsa-957fd.firebaseapp.com",
+    databaseURL: "https://thsa-957fd.firebaseio.com",
+    projectId: "thsa-957fd",
+    storageBucket: "thsa-957fd.appspot.com",
+    messagingSenderId: "1046384946248"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index2.js"></script>
+<footer class="container-fluid text-center">
+  <div class="row">
+<div class="col-sm-4">
+  <h4>CONTACT US<br>
+  phone no:+919492949596
+  </h4>
+  <h4>email: gensecthsa@gmail.com</h4>
+</div>
+<div class="col-sm-4">
+  <h3>connect</h3>
+  <a href="https://www.facebook.com/thsain" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/thsa93174337" class="fa fa-twitter"></a>
+  <a href="" class="fa fa-whatsapp"></a>
+
+</div>
+<div class="col-sm-4">
+  <img src="img/bunny.png" class="icon">
+</div>
+
+  </div>
+</footer>
+</body>
+</html>

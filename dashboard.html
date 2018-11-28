@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> twin cities hospital suppliers association </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.navbar {
+margin-bottom: 0;
+border-radius: 0;
+background-color: #5E4485;
+color: #FFF;
+padding: 1% 0;
+font-size: 1.2em;
+border: 0;
+}
+.navbar-brand{
+  float: left;
+  min-height: 55px;
+  padding: 0 15px 5px;
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus ,.navbar-inverse .navbar-nav .active a:hover
+{
+  color: #FFF;
+  background-color:#5E4485;
+}
+.navbar-inverse.navbar-nav li a {
+color: #D5D5D5;
+
+}
+.nav{
+  float: left;
+  margin:0;
+  padding:0;
+  height: 100%;
+  font-size: 1.2em;  
+}
+.tabcontent {
+    display: none;
+    margin-left: 250px;
+    align-content: center;
+  }
+.container{
+  height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 0;
+    
+    background-color: #FFF;
+    
+    padding-top: 20px;
+}
+footer{
+  width: 100%;
+  background-color: #5E4485;
+  padding: 3%;
+  color: #FFF;
+}
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  color: #FFF;
+}
+.fa:hover{
+  color: #D5D5D5;
+  text-decoration: none;
+
+}
+@media (max-width: 900px){
+  .fa{
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-caption{
+    display: none;
+  }
+  #icon{
+    max-width: 150px;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar-inverse navbar fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+  
+
+      </button>
+      <a class="navbar-brand" href="index2.html"><img src="img/THSA.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="index2.html">HOME</a></li>
+        <li ><a href="about2.html">ABOUT</a></li>
+        <li><a href="contactus2.html">CONTACT US</a></li>
+        <li><a href="productsearch2.html">PRODUCT SEARCH</a></li>
+        <li class="active"><a href="dashboard.html">DASHBOARD</a><li>
+        <li><a href="login2.html">LOGOUT</a></li>
+      </ul>
+  </div>
+</nav>
+
+      <div class="container">
+  <h2>  User Dashboard</h2>
+                    
+  <ul class="nav nav-pills nav-stacked" role="tablist">
+    <li class="tablinks" onclick="openCity(event, 'Newsupdates')"><a href="#">News Updates</a></li>
+    <li class="tablinks" onclick="openCity(event, 'Recomendations')"><a href="#">Recomendations</a></li>
+    <li class="tablinks" onclick="openCity(event, 'Grievences')"><a href="#">Grievences</a></li>
+    <li class="tablinks" onclick="openCity(event, 'Suggestions')"><a href="#">Suggestions</a></li> 
+    <li class="tablinks" onclick="openCity(event, 'Blacklisted')"><a href="#">Black Listed</a></li>       
+  </ul>
+</div>
+<div id="Newsupdates" class="tabcontent">
+ <div class="container">
+  <h2>News Updates</h2>
+  <div class="list-group">
+    <a href="https://www.facebook.com/thsain"  class="list-group-item list-group-item-action">first release</a>
+    <a href="#" class="list-group-item list-group-item-action">alpha1</a>
+    <a href="#" class="list-group-item list-group-item-action">om</a>
+  </div>
+</div>
+</div>
+
+<div id="Recomendations" class="tabcontent">
+  <h3>Recomendations</h3>
+  <form>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div id="Grievences" class="tabcontent">
+  <h3>Grivences</h3>
+  <form>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div id="Suggestions" class="tabcontent">
+  <h3>Suggestions</h3>
+  <form>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div id="Blacklisted" class="tabcontent">
+  <h3>Blacklisted</h3>
+  
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+</body>
+</html>
+
